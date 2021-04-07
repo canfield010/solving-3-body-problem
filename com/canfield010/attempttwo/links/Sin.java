@@ -19,4 +19,9 @@ public class Sin extends Link {
     public String getString() {
         return "Sin("+link1.getString()+")";
     }
+
+    @Override
+    public int getCount() {
+        return 1+link1.getCount();
+    }
 }

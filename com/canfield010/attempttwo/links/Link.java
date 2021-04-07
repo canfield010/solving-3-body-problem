@@ -4,13 +4,18 @@ import java.util.Random;
 
 public abstract class Link {
 
-    public static final float INITIAL_BRANCH_RATE = 0.8F;
+    public static final float INITIAL_BRANCH_RATE = 0.9F;
     public static final float BRANCH_REDUCTION = 0.85F;
+    public static final int THREAD_COUNT = 10;
+    public static final int ATTEMPT_COMPUTATIONS = 1_000;
+    public static final double ATTEMPT_ACCEPTED_ACCURACY = 0.01;
+    public static final double ATTEMPT_VERY_GOOD_ACCURACY = 0.000001;
 
     public abstract double compute(Random r, int count);
 
     public abstract String getString();
 
+    public abstract int getCount();
 
     // if I ever add or remove operators or constants, I can change it here and it will affect my code everywhere!
     public static Link getRandomOperator(Random r, float branchRate) {

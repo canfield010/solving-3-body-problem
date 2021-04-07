@@ -13,4 +13,9 @@ public class One extends Link {
     public String getString() {
         return "One";
     }
+
+    @Override
+    public int getCount() {
+        return 1;
+    }
 }

@@ -19,4 +19,9 @@ public class Cos extends Link {
     public String getString() {
         return "Cos("+link1.getString()+")";
     }
+
+    @Override
+    public int getCount() {
+        return 1+link1.getCount();
+    }
 }

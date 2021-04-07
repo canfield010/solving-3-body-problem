@@ -22,7 +22,12 @@ public class Invert extends Link {
 
     @Override
     public String getString() {
-        return "Invert("+link1.getString()+")";
+        return "Invert("+link1.getString()+", phase: "+phase+", offset: "+offset+")";
+    }
+
+    @Override
+    public int getCount() {
+        return 1+link1.getCount();
     }
 
 }

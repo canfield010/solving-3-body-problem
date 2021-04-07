@@ -21,4 +21,9 @@ public class Modulo extends Link {
     public String getString() {
         return "Modulo("+link1.getString()+", "+link2.getString()+")";
     }
+
+    @Override
+    public int getCount() {
+        return 1+link1.getCount()+link2.getCount();
+    }
 }

@@ -22,4 +22,9 @@ public class Add extends Link {
         return "Add("+link1.getString()+", "+link2.getString()+")";
     }
 
+    @Override
+    public int getCount() {
+        return 1+link1.getCount()+link2.getCount();
+    }
+
 }
